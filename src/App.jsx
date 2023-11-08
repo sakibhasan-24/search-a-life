@@ -1,7 +1,17 @@
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Home from "./components/Home";
+
 export default function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+      children: [],
+    },
+  ]);
   return (
     <div>
-      <h1>Search A carrier</h1>
+      <RouterProvider router={router} />
     </div>
   );
 }
